@@ -185,7 +185,7 @@
             <div class="row align-items-center justify-content-md-between py-4 mt-4 delimiter-top">
                 <div class="col-md-6">
                     <div class="copyright text-sm font-weight-bold text-center text-md-left">
-                        {{ !empty($companySettings['footer_text']) ? $companySettings['footer_text']->value : 'ERPGo SaaS' }}
+                        {{ !empty($companySettings['footer_text']) ? $companySettings['footer_text']->value : 'Buildera ERP SaaS' }}
                     </div>
                 </div>
                 <div class="col-md-6">

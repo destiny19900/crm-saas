@@ -1,64 +1,151 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400"></a></p>
+# Buildera ERP SaaS
 
 <p align="center">
-<a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
+<img src="public/storage/uploads/logo/logo-dark.png" alt="Buildera ERP SaaS" width="200">
 </p>
 
-## About Laravel
+<p align="center">
+<a href="https://github.com/destiny19900/crm-saas/blob/main/LICENSE"><img src="https://img.shields.io/badge/license-Proprietary-red" alt="License"></a>
+<a href="https://github.com/destiny19900/crm-saas/stargazers"><img src="https://img.shields.io/github/stars/destiny19900/crm-saas" alt="Stars"></a>
+<a href="https://github.com/destiny19900/crm-saas/network"><img src="https://img.shields.io/github/forks/destiny19900/crm-saas" alt="Forks"></a>
+</p>
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+## About Buildera ERP SaaS
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+Buildera ERP SaaS is a comprehensive business management solution that combines Project Management, Accounting, HR, and CRM functionalities in one platform. It helps businesses streamline operations, improve productivity, and make data-driven decisions through real-time insights and analytics.
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+## Key Features
 
-## Learning Laravel
+- **Project Management**
+  - Task tracking and management
+  - Team collaboration tools
+  - Project timeline and milestones
+  - Resource allocation
+  - Progress monitoring
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+- **Financial Management**
+  - Complete accounting suite
+  - Invoice generation and tracking
+  - Expense management
+  - Financial reporting
+  - Cash flow monitoring
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 2000 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+- **HR & CRM**
+  - Employee management
+  - Recruitment tools
+  - Performance tracking
+  - Customer relationship management
+  - Lead and opportunity tracking
 
-## Laravel Sponsors
+- **Business Intelligence**
+  - Real-time analytics
+  - Customizable dashboards
+  - Advanced reporting
+  - Data visualization
+  - Performance metrics
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
+- **Cloud-Based Solution**
+  - Secure data storage
+  - Automatic backups
+  - Regular updates
+  - Cross-device accessibility
+  - Enterprise-grade security
 
-### Premium Partners
+## Requirements
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[Many](https://www.many.co.uk)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[OP.GG](https://op.gg)**
-- **[WebReinvent](https://webreinvent.com/?utm_source=laravel&utm_medium=github&utm_campaign=patreon-sponsors)**
-- **[Lendio](https://lendio.com)**
+- PHP >= 8.0
+- MySQL >= 5.7
+- Composer
+- Node.js & NPM
+- Web Server (Apache/Nginx)
+
+## Installation
+
+1. Clone the repository:
+```bash
+git clone https://github.com/destiny19900/crm-saas.git
+cd crm-saas
+```
+
+2. Install PHP dependencies:
+```bash
+composer install
+```
+
+3. Install NPM dependencies:
+```bash
+npm install
+```
+
+4. Create environment file:
+```bash
+cp .env.example .env
+```
+
+5. Generate application key:
+```bash
+php artisan key:generate
+```
+
+6. Configure your database in `.env` file:
+```bash
+DB_CONNECTION=mysql
+DB_HOST=127.0.0.1
+DB_PORT=3306
+DB_DATABASE=your_database
+DB_USERNAME=your_username
+DB_PASSWORD=your_password
+```
+
+7. Run database migrations:
+```bash
+php artisan migrate
+```
+
+8. Create storage link:
+```bash
+php artisan storage:link
+```
+
+9. Start the development server:
+```bash
+php artisan serve
+```
+
+## Usage
+
+1. Access the application at `http://localhost:8000`
+2. Register a new account or use the demo credentials
+3. Configure your company settings
+4. Start managing your business operations
+
+## Security
+
+If you discover any security vulnerabilities, please send an email to [security@builderasaas.com](mailto:security@builderasaas.com). All security vulnerabilities will be promptly addressed.
+
+## Support
+
+For support, please email [support@builderasaas.com](mailto:support@builderasaas.com) or visit our [support portal](https://builderasaas.com/support).
 
 ## Contributing
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
-
-## Code of Conduct
-
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
-
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+We welcome contributions to Buildera ERP SaaS! Please see our [contributing guidelines](CONTRIBUTING.md) for details.
 
 ## License
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+Buildera ERP SaaS is proprietary software. All rights are reserved by Buildera Tech.
+
+This software is NOT open source and requires a valid license for use. To obtain a license:
+
+1. Contact us at [sales@builderasaas.com](mailto:sales@builderasaas.com)
+2. Provide details about your intended use
+3. Complete our licensing process
+
+For more information, please see our [LICENSE](LICENSE) file.
+
+## Credits
+
+- [Laravel Framework](https://laravel.com)
+- [Bootstrap](https://getbootstrap.com)
+- [Tabler Icons](https://tabler-icons.io)
+- [All Contributors](../../contributors)

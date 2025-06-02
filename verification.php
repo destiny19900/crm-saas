@@ -1,5 +1,5 @@
 <?php
-// System : ERPGo SaaS
+// System : Buildera ERP SaaS
 // System Version :3.9
 
 function getPhpVersionInfo()

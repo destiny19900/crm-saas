@@ -1,4 +1,4 @@
-@php
+<?php
     use App\Models\Utility;
 
     $settings = Utility::settings();
@@ -14,12 +14,12 @@
     $mode_setting = \App\Models\Utility::mode_layout();
     $SITE_RTL = Utility::getValByName('SITE_RTL');
 
-@endphp
+?>
 <!DOCTYPE html>
-<html lang="en"  dir="{{$setting['SITE_RTL'] == 'on'?'rtl':''}}">
+<html lang="en"  dir="<?php echo e($setting['SITE_RTL'] == 'on'?'rtl':''); ?>">
 <head>
 
-    <title>{{__('Buildera ERP SaaS')}}</title>
+    <title><?php echo e(__('Buildera ERP SaaS')); ?></title>
     <!-- HTML5 Shim and Respond.js IE11 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 11]>
@@ -38,36 +38,36 @@
     <meta name="author" content="Buildera Tech" />
 
     <!-- Favicon icon -->
-    <link rel="icon" href="{{asset('assets/images/favicon.png')}}" type="image/x-icon" />
+    <link rel="icon" href="<?php echo e(asset('assets/images/favicon.png')); ?>" type="image/x-icon" />
 
-    <link rel="stylesheet" href="{{asset('assets/css/plugins/animate.min.css')}}" />
+    <link rel="stylesheet" href="<?php echo e(asset('assets/css/plugins/animate.min.css')); ?>" />
     <!-- font css -->
-    <link rel="stylesheet" href="{{asset('assets/fonts/tabler-icons.min.css')}}">
-    <link rel="stylesheet" href="{{asset('assets/fonts/feather.css')}}">
-    <link rel="stylesheet" href="{{asset('assets/fonts/fontawesome.css')}}">
-    <link rel="stylesheet" href="{{asset('assets/fonts/material.css')}}">
+    <link rel="stylesheet" href="<?php echo e(asset('assets/fonts/tabler-icons.min.css')); ?>">
+    <link rel="stylesheet" href="<?php echo e(asset('assets/fonts/feather.css')); ?>">
+    <link rel="stylesheet" href="<?php echo e(asset('assets/fonts/fontawesome.css')); ?>">
+    <link rel="stylesheet" href="<?php echo e(asset('assets/fonts/material.css')); ?>">
 
     <!-- vendor css -->
-    @if ($SITE_RTL == 'on')
-        <link rel="stylesheet" href="{{ asset('assets/css/style-rtl.css') }}">
-    @endif
-    @if ($setting['cust_darklayout'] == 'on')
-        <link rel="stylesheet" href="{{ asset('assets/css/style-dark.css') }}">
-    @else
-        <link rel="stylesheet" href="{{ asset('assets/css/style.css') }}" id="main-style-link">
-    @endif
-    <link rel="stylesheet" href="{{asset('assets/css/customizer.css')}}">
+    <?php if($SITE_RTL == 'on'): ?>
+        <link rel="stylesheet" href="<?php echo e(asset('assets/css/style-rtl.css')); ?>">
+    <?php endif; ?>
+    <?php if($setting['cust_darklayout'] == 'on'): ?>
+        <link rel="stylesheet" href="<?php echo e(asset('assets/css/style-dark.css')); ?>">
+    <?php else: ?>
+        <link rel="stylesheet" href="<?php echo e(asset('assets/css/style.css')); ?>" id="main-style-link">
+    <?php endif; ?>
+    <link rel="stylesheet" href="<?php echo e(asset('assets/css/customizer.css')); ?>">
 
-    <link rel="stylesheet" href="{{asset('assets/css/landing.css')}}" />
+    <link rel="stylesheet" href="<?php echo e(asset('assets/css/landing.css')); ?>" />
 </head>
 
-<body class="{{$color}}">
+<body class="<?php echo e($color); ?>">
 <!-- [ Nav ] start -->
 <nav class="navbar navbar-expand-md navbar-dark default top-nav-collapse">
     <div class="container">
         <a class="navbar-brand bg-transparent" href="">
 
-                <img src="{{ $logo .'/logo-light.png' }}" alt="logo" width="40%"/>
+                <img src="<?php echo e($logo .'/logo-light.png'); ?>" alt="logo" width="40%"/>
 
         </a>
         <button
@@ -90,22 +90,25 @@
                     <a class="nav-link" href="#features">Features</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#dashboard">Dashboard</a>
+                    <a class="nav-link" href="#layouts">Layouts</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#price">Pricing</a>
+                    <a class="nav-link" href="#testimonial">Testimonial</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#faq">FAQ</a>
+                    <a class="nav-link" href="#pricing">Pricing</a>
                 </li>
                 <li class="nav-item">
-                    <a class="btn btn-light ms-2 me-1" href="{{ route('login') }}">{{__('Login')}}</a>
+                    <a class="nav-link" href="#faq">Faq</a>
                 </li>
-                @if($settings['enable_signup'] == 'on')
+                <li class="nav-item">
+                    <a class="btn btn-light ms-2 me-1" href="<?php echo e(route('login')); ?>"><?php echo e(__('Login')); ?></a>
+                </li>
+                <?php if($settings['enable_signup'] == 'on'): ?>
                     <li class="nav-item">
-                        <a class="btn btn-light ms-2 me-1" href="{{ route('register') }}">Register</a>
+                        <a class="btn btn-light ms-2 me-1" href="<?php echo e(route('register')); ?>">Register</a>
                     </li>
-                @endif
+                <?php endif; ?>
             </ul>
         </div>
     </div>
@@ -120,19 +123,21 @@
                     class="text-white mb-sm-4 wow animate__fadeInLeft"
                     data-wow-delay="0.2s"
                 >
-                    {{__('Buildera ERP SaaS')}}
+                    <?php echo e(__('Buildera ERP SaaS')); ?>
+
                 </h1>
                 <h2
                     class="text-white mb-sm-4 wow animate__fadeInLeft"
                     data-wow-delay="0.4s"
                 >
-                    {{__('All-In-One Business Management Solution')}}
+                    <?php echo e(__('All-In-One Business Management Solution')); ?>
+
                 </h2>
                 <p class="mb-sm-4 wow animate__fadeInLeft" data-wow-delay="0.6s">
                     Streamline your business operations with our comprehensive ERP platform. Manage projects, accounts, HR, and CRM all in one place. Boost productivity and make data-driven decisions with real-time insights.
                 </p>
                 <div class="my-4 wow animate__fadeInLeft" data-wow-delay="0.8s">
-                    <a href="{{ route('login') }}" class="btn btn-light me-2"
+                    <a href="<?php echo e(route('login')); ?>" class="btn btn-light me-2"
                     ><i class="far fa-eye me-2"></i>Try Demo</a
                     >
                     <a href="https://codecanyon.net/item/erpgo-saas-all-in-one-business-erp-with-project-account-hrm-crm/33263426" class="btn btn-outline-light" target="_blank"
@@ -142,7 +147,7 @@
             </div>
             <div class="col-sm-5">
                 <img
-                    src="{{asset('assets/images/front/header-mokeup.svg')}}"
+                    src="<?php echo e(asset('assets/images/front/header-mokeup.svg')); ?>"
                     alt="Datta Able Admin Template"
                     class="img-fluid header-img wow animate__fadeInRight"
                     data-wow-delay="0.2s"
@@ -198,7 +203,7 @@
             </div>
         </div>
         <img
-            src="{{asset('landing/images/dashboard.png')}}"
+            src="<?php echo e(asset('landing/images/dashboard.png')); ?>"
             alt=""
             class="img-fluid img-dashboard wow animate__fadeInUp mt-5"  style='border-radius: 15px;'
             data-wow-delay="0.2s"
@@ -215,10 +220,12 @@
                     class="mb-sm-4 f-w-600 wow animate__fadeInLeft"
                     data-wow-delay="0.2s"
                 >
-                    {{__('Project Management')}}
+                    <?php echo e(__('Project Management')); ?>
+
                 </h1>
                 <h2 class="mb-sm-4 wow animate__fadeInLeft" data-wow-delay="0.4s">
-                    {{__('Streamline Your Projects')}}
+                    <?php echo e(__('Streamline Your Projects')); ?>
+
                 </h2>
                 <p class="mb-sm-4 wow animate__fadeInLeft" data-wow-delay="0.6s">
                     Plan, track, and manage projects efficiently. Set milestones, assign tasks, and monitor progress in real-time. Keep your team aligned and deliver projects on time, every time.
@@ -231,7 +238,7 @@
             </div>
             <div class="col-sm-6">
                 <img
-                    src="{{asset('landing/images/dashboard.png')}}"
+                    src="<?php echo e(asset('landing/images/dashboard.png')); ?>"
                     alt="Datta Able Admin Template"
                     class="img-fluid header-img wow animate__fadeInRight"
                     data-wow-delay="0.2s"
@@ -241,7 +248,7 @@
         <div class="row align-items-center justify-content-start">
             <div class="col-sm-6">
                 <img
-                    src="{{asset('assets/images/front/img-crm-dash-2.svg')}}"
+                    src="<?php echo e(asset('assets/images/front/img-crm-dash-2.svg')); ?>"
                     alt="Datta Able Admin Template"
                     class="img-fluid header-img wow animate__fadeInLeft"
                     data-wow-delay="0.2s"
@@ -252,10 +259,12 @@
                     class="mb-sm-4 f-w-600 wow animate__fadeInRight"
                     data-wow-delay="0.2s"
                 >
-                    {{__('Financial Management')}}
+                    <?php echo e(__('Financial Management')); ?>
+
                 </h1>
                 <h2 class="mb-sm-4 wow animate__fadeInRight" data-wow-delay="0.4s">
-                    {{__('Complete Financial Control')}}
+                    <?php echo e(__('Complete Financial Control')); ?>
+
                 </h2>
                 <p class="mb-sm-4 wow animate__fadeInRight" data-wow-delay="0.6s">
                     Manage your finances with precision. Track expenses, generate invoices, monitor cash flow, and get detailed financial reports. Make informed decisions with comprehensive financial insights.
@@ -271,7 +280,7 @@
 </section>
 <!-- [ dashboard ] End -->
 <!-- [ feature ] start -->
-<section id="features" class="feature">
+<section id="feature" class="feature">
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-xl-6 col-md-9 title">
@@ -358,7 +367,7 @@
             </div>
         </div>
         <div class="text-center pt-sm-5 feature-mobile-screen">
-            <a href="{{ route('login') }}" class="btn px-sm-5 btn-primary me-sm-3">Try Demo</a>
+            <a href="<?php echo e(route('login')); ?>" class="btn px-sm-5 btn-primary me-sm-3">Try Demo</a>
             <a href="https://codecanyon.net/item/erpgo-saas-all-in-one-business-erp-with-project-account-hrm-crm/33263426" class="btn px-sm-5 btn-outline-primary" target="_blank">
                 Get Started
             </a>
@@ -375,10 +384,12 @@
                     class="mb-sm-4 f-w-600 wow animate__fadeInLeft"
                     data-wow-delay="0.2s"
                 >
-                    {{__('HR & CRM')}}
+                    <?php echo e(__('HR & CRM')); ?>
+
                 </h1>
                 <h2 class="mb-sm-4 wow animate__fadeInLeft" data-wow-delay="0.4s">
-                    {{__('Manage Your Team & Customers')}}
+                    <?php echo e(__('Manage Your Team & Customers')); ?>
+
                 </h2>
                 <p class="mb-sm-4 wow animate__fadeInLeft" data-wow-delay="0.6s">
                     Handle employee management, recruitment, and performance tracking. Build stronger customer relationships with our powerful CRM tools. Everything you need to grow your business.
@@ -391,7 +402,7 @@
             </div>
             <div class="col-sm-6">
                 <img
-                    src="{{asset('landing/images/dash-2.svg')}}"
+                    src="<?php echo e(asset('landing/images/dash-2.svg')); ?>"
                     alt="Datta Able Admin Template"
                     class="img-fluid header-img wow animate__fadeInRight"
                     data-wow-delay="0.2s"
@@ -401,7 +412,7 @@
         <div class="row align-items-center justify-content-start">
             <div class="col-sm-6">
                 <img
-                    src="{{asset('assets/images/front/img-crm-dash-4.svg')}}"
+                    src="<?php echo e(asset('assets/images/front/img-crm-dash-4.svg')); ?>"
                     alt="Datta Able Admin Template"
                     class="img-fluid header-img wow animate__fadeInLeft"
                     data-wow-delay="0.2s"
@@ -412,10 +423,12 @@
                     class="mb-sm-4 f-w-600 wow animate__fadeInRight"
                     data-wow-delay="0.2s"
                 >
-                    {{__('Business Intelligence')}}
+                    <?php echo e(__('Business Intelligence')); ?>
+
                 </h1>
                 <h2 class="mb-sm-4 wow animate__fadeInRight" data-wow-delay="0.4s">
-                    {{__('Data-Driven Insights')}}
+                    <?php echo e(__('Data-Driven Insights')); ?>
+
                 </h2>
                 <p class="mb-sm-4 wow animate__fadeInRight" data-wow-delay="0.6s">
                     Transform your business data into actionable insights. Get real-time analytics, custom reports, and performance metrics. Make smarter decisions with our powerful business intelligence tools.
@@ -489,7 +502,7 @@
                             </li>
                         </ul>
                         <div class="d-grid text-center">
-                            <a href="{{ route('register') }}" class="btn mb-3 btn-primary d-flex justify-content-center align-items-center mx-sm-5">
+                            <a href="<?php echo e(route('register')); ?>" class="btn mb-3 btn-primary d-flex justify-content-center align-items-center mx-sm-5">
                                 Start Free Trial
                                 <i class="ti ti-chevron-right ms-2"></i>
                             </a>
@@ -548,7 +561,7 @@
                             </li>
                         </ul>
                         <div class="d-grid text-center">
-                            <a href="{{ route('register') }}" class="btn mb-3 btn-light d-flex justify-content-center align-items-center mx-sm-5">
+                            <a href="<?php echo e(route('register')); ?>" class="btn mb-3 btn-light d-flex justify-content-center align-items-center mx-sm-5">
                                 Start Free Trial
                                 <i class="ti ti-chevron-right ms-2"></i>
                             </a>
@@ -620,7 +633,7 @@
 </section>
 <!-- [ price ] End -->
 <!-- [ faq ] start -->
-<section id="faq" class="faq">
+<section class="faq">
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-xl-6 col-md-9 title">
@@ -806,10 +819,12 @@
                     class="mb-sm-4 f-w-600 wow animate__fadeInLeft"
                     data-wow-delay="0.2s"
                 >
-                    {{__('Cloud-Based Solution')}}
+                    <?php echo e(__('Cloud-Based Solution')); ?>
+
                 </h1>
                 <h2 class="mb-sm-4 wow animate__fadeInLeft" data-wow-delay="0.4s">
-                    {{__('Access Anywhere, Anytime')}}
+                    <?php echo e(__('Access Anywhere, Anytime')); ?>
+
                 </h2>
                 <p class="mb-sm-4 wow animate__fadeInLeft" data-wow-delay="0.6s">
                     Work seamlessly across devices with our cloud-based platform. Secure data storage, automatic backups, and regular updates. Focus on growing your business while we handle the technology.
@@ -824,7 +839,7 @@
                 <div class="row feature-img-row">
                     <div class="col-3">
                         <img
-                            src="{{asset('landing/images/dashboard.png')}}"
+                            src="<?php echo e(asset('landing/images/dashboard.png')); ?>"
                             class="img-fluid header-img wow animate__fadeInRight"
                             data-wow-delay="0.2s"
                             alt="Admin"
@@ -832,7 +847,7 @@
                     </div>
                     <div class="col-3">
                         <img
-                            src="{{asset('landing/images/dash-3.png')}}"
+                            src="<?php echo e(asset('landing/images/dash-3.png')); ?>"
                             class="img-fluid header-img wow animate__fadeInRight"
                             data-wow-delay="0.4s"
                             alt="Admin"
@@ -840,7 +855,7 @@
                     </div>
                     <div class="col-3">
                         <img
-                            src="{{asset('landing/images/dash-4.png')}}"
+                            src="<?php echo e(asset('landing/images/dash-4.png')); ?>"
                             class="img-fluid header-img wow animate__fadeInRight"
                             data-wow-delay="0.6s"
                             alt="Admin"
@@ -848,7 +863,7 @@
                     </div>
                     <div class="col-3">
                         <img
-                            src="{{asset('landing/images/dash-5.png')}}"
+                            src="<?php echo e(asset('landing/images/dash-5.png')); ?>"
                             class="img-fluid header-img wow animate__fadeInRight"
                             data-wow-delay="0.8s"
                             alt="Admin"
@@ -856,7 +871,7 @@
                     </div>
                     <div class="col-3 mt-5">
                         <img
-                            src="{{asset('landing/images/dash-6.png')}}"
+                            src="<?php echo e(asset('landing/images/dash-6.png')); ?>"
                             class="img-fluid header-img wow animate__fadeInRight"
                             data-wow-delay="0.3s"
                             alt="Admin"
@@ -864,7 +879,7 @@
                     </div>
                     <div class="col-3 mt-5">
                         <img
-                            src="{{asset('landing/images/dash-7.png')}}"
+                            src="<?php echo e(asset('landing/images/dash-7.png')); ?>"
                             class="img-fluid header-img wow animate__fadeInRight"
                             data-wow-delay="0.5s"
                             alt="Admin"
@@ -872,7 +887,7 @@
                     </div>
                     <div class="col-3 mt-5">
                         <img
-                            src="{{asset('landing/images/dash-8.png')}}"
+                            src="<?php echo e(asset('landing/images/dash-8.png')); ?>"
                             class="img-fluid header-img wow animate__fadeInRight"
                             data-wow-delay="0.7s"
                             alt="Admin"
@@ -880,7 +895,7 @@
                     </div>
                     <div class="col-3 mt-5">
                         <img
-                            src="{{asset('landing/images/dash-9.png')}}"
+                            src="<?php echo e(asset('landing/images/dash-9.png')); ?>"
                             class="img-fluid header-img wow animate__fadeInRight"
                             data-wow-delay="0.9s"
                             alt="Admin"
@@ -897,27 +912,27 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-6 col-sm-12">
-                @if($settings['cust_darklayout'] && $settings['cust_darklayout'] == 'on' )
+                <?php if($settings['cust_darklayout'] && $settings['cust_darklayout'] == 'on' ): ?>
 
-                    <img src="{{ $logo . '/' . (isset($company_logos) && !empty($company_logos) ? $company_logos : 'logo-dark.png') }}"
+                    <img src="<?php echo e($logo . '/' . (isset($company_logos) && !empty($company_logos) ? $company_logos : 'logo-dark.png')); ?>"
                          alt="logo" style="width: 150px;" >
-                @else
+                <?php else: ?>
 
-                    <img src="{{ $logo . '/' . (isset($company_logo) && !empty($company_logo) ? $company_logo : 'logo-dark.png') }}"
+                    <img src="<?php echo e($logo . '/' . (isset($company_logo) && !empty($company_logo) ? $company_logo : 'logo-dark.png')); ?>"
                          alt="logo" style="width: 150px;" >
-                @endif
+                <?php endif; ?>
             </div>
             <div class="col-lg-6 col-sm-12 text-end">
-                <p class="text-body">Copyright © {{ date('Y') }} Buildera ERP SaaS | All Rights Reserved</p>
+                <p class="text-body">Copyright © <?php echo e(date('Y')); ?> Buildera ERP SaaS | All Rights Reserved</p>
             </div>
         </div>
     </div>
 </section>
 <!-- [ dashboard ] End -->
 <!-- Required Js -->
-<script src="{{asset('assets/js/plugins/popper.min.js')}}"></script>
-<script src="{{asset('assets/js/plugins/bootstrap.min.js')}}"></script>
-<script src="{{asset('assets/js/pages/wow.min.js')}}"></script>
+<script src="<?php echo e(asset('assets/js/plugins/popper.min.js')); ?>"></script>
+<script src="<?php echo e(asset('assets/js/plugins/bootstrap.min.js')); ?>"></script>
+<script src="<?php echo e(asset('assets/js/pages/wow.min.js')); ?>"></script>
 <script>
     // Start [ Menu hide/show on scroll ]
     let ost = 0;
@@ -930,64 +945,20 @@
             document.querySelector(".navbar").classList.remove("default");
         } else {
             document.querySelector(".navbar").classList.add("default");
-            document.querySelector(".navbar").classList.remove("top-nav-collapse");
+            document
+                .querySelector(".navbar")
+                .classList.remove("top-nav-collapse");
         }
         ost = cOst;
     });
     // End [ Menu hide/show on scroll ]
-
-    // Smooth scrolling for navigation links
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function (e) {
-            e.preventDefault();
-            const targetId = this.getAttribute('href');
-            const targetElement = document.querySelector(targetId);
-            
-            if (targetElement) {
-                // Update active state in navigation
-                document.querySelectorAll('.nav-link').forEach(link => {
-                    link.classList.remove('active');
-                });
-                this.classList.add('active');
-
-                // Smooth scroll to target
-                const headerOffset = 80; // Adjust this value based on your header height
-                const elementPosition = targetElement.getBoundingClientRect().top;
-                const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
-
-                window.scrollTo({
-                    top: offsetPosition,
-                    behavior: 'smooth'
-                });
-            }
-        });
-    });
-
-    // Update active state on scroll
-    window.addEventListener('scroll', function() {
-        const sections = document.querySelectorAll('section[id]');
-        const scrollPosition = window.pageYOffset;
-
-        sections.forEach(section => {
-            const sectionTop = section.offsetTop - 100;
-            const sectionHeight = section.offsetHeight;
-            const sectionId = section.getAttribute('id');
-            
-            if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
-                document.querySelectorAll('.nav-link').forEach(link => {
-                    link.classList.remove('active');
-                    if (link.getAttribute('href') === '#' + sectionId) {
-                        link.classList.add('active');
-                    }
-                });
-            }
-        });
-    });
-
     var wow = new WOW({
-        animateClass: "animate__animated",
+        animateClass: "animate__animated", // animation css class (default is animated)
     });
     wow.init();
+    var scrollSpy = new bootstrap.ScrollSpy(document.body, {
+        target: "#navbar-example",
+    });
     function contactSales() {
         // Add your contact sales logic here
         alert('Please contact our sales team at sales@builderasaas.com for enterprise pricing.');
@@ -995,3 +966,4 @@
 </script>
 </body>
 </html>
+<?php /**PATH C:\xampp\htdocs\crm-saas\resources\views/layouts/landing.blade.php ENDPATH**/ ?>
