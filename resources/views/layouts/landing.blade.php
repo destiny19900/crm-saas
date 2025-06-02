@@ -166,70 +166,37 @@
         <div class="row align-items-center justify-content-center mobile-screen dashboard_images">
             <div class="col-lg-2">
                 <div class="wow animate__fadeInRight mobile-widget" data-wow-delay="0.2s">
-
-                    @if($mode_setting['cust_darklayout'] && $mode_setting['cust_darklayout'] == 'on' )
-
-                        <img src="{{ $logo . '/' . (isset($company_logos) && !empty($company_logos) ? $company_logos : 'logo-dark.png') }}"
-                             alt="" class="img-fluid ">
-                    @else
-
-                        <img src="{{ $logo . '/' . (isset($company_logo) && !empty($company_logo) ? $company_logo : 'logo-dark.png') }}"
-                             alt="" class="img-fluid">
-                    @endif
-
-
+                    <div class="business-logo" style="background: #2c3e50; color: white; padding: 15px; text-align: center; border-radius: 8px; font-weight: bold; font-size: 24px;">
+                        RAPIDGO
+                    </div>
                 </div>
             </div>
             <div class="col-lg-2">
                 <div class="wow animate__fadeInRight mobile-widget" data-wow-delay="0.4s">
-                    @if($mode_setting['cust_darklayout'] && $mode_setting['cust_darklayout'] == 'on' )
-
-                        <img src="{{ $logo . '/' . (isset($company_logos) && !empty($company_logos) ? $company_logos : 'logo-dark.png') }}"
-                             alt="" class="img-fluid ">
-                    @else
-
-                        <img src="{{ $logo . '/' . (isset($company_logo) && !empty($company_logo) ? $company_logo : 'logo-dark.png') }}"
-                             alt="" class="img-fluid">
-                    @endif
+                    <div class="business-logo" style="background: #e74c3c; color: white; padding: 15px; text-align: center; border-radius: 8px; font-weight: bold; font-size: 24px;">
+                        TECHFLOW
+                    </div>
                 </div>
             </div>
             <div class="col-lg-2">
                 <div class="wow animate__fadeInRight mobile-widget" data-wow-delay="0.6s">
-                    @if($mode_setting['cust_darklayout'] && $mode_setting['cust_darklayout'] == 'on' )
-
-                        <img src="{{ $logo . '/' . (isset($company_logos) && !empty($company_logos) ? $company_logos : 'logo-dark.png') }}"
-                             alt="" class="img-fluid ">
-                    @else
-
-                        <img src="{{ $logo . '/' . (isset($company_logo) && !empty($company_logo) ? $company_logo : 'logo-dark.png') }}"
-                             alt="" class="img-fluid">
-                    @endif
+                    <div class="business-logo" style="background: #27ae60; color: white; padding: 15px; text-align: center; border-radius: 8px; font-weight: bold; font-size: 24px;">
+                        SMARTBIZ
+                    </div>
                 </div>
             </div>
             <div class="col-lg-2">
                 <div class="wow animate__fadeInRight mobile-widget" data-wow-delay="0.8s">
-                    @if($mode_setting['cust_darklayout'] && $mode_setting['cust_darklayout'] == 'on' )
-
-                        <img src="{{ $logo . '/' . (isset($company_logos) && !empty($company_logos) ? $company_logos : 'logo-dark.png') }}"
-                             alt="" class="img-fluid ">
-                    @else
-
-                        <img src="{{ $logo . '/' . (isset($company_logo) && !empty($company_logo) ? $company_logo : 'logo-dark.png') }}"
-                             alt="" class="img-fluid">
-                    @endif
+                    <div class="business-logo" style="background: #8e44ad; color: white; padding: 15px; text-align: center; border-radius: 8px; font-weight: bold; font-size: 24px;">
+                        INNOVATE
+                    </div>
                 </div>
             </div>
             <div class="col-lg-2">
                 <div class="wow animate__fadeInRight mobile-widget" data-wow-delay="1s">
-                    @if($mode_setting['cust_darklayout'] && $mode_setting['cust_darklayout'] == 'on' )
-
-                        <img src="{{ $logo . '/' . (isset($company_logos) && !empty($company_logos) ? $company_logos : 'logo-dark.png') }}"
-                             alt="" class="img-fluid">
-                    @else
-
-                        <img src="{{ $logo . '/' . (isset($company_logo) && !empty($company_logo) ? $company_logo : 'logo-dark.png') }}"
-                             alt="" class="img-fluid">
-                    @endif
+                    <div class="business-logo" style="background: #f39c12; color: white; padding: 15px; text-align: center; border-radius: 8px; font-weight: bold; font-size: 24px;">
+                        GLOBEX
+                    </div>
                 </div>
             </div>
         </div>
@@ -687,10 +654,9 @@
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-xl-6 col-md-9 title">
-                <h2><span>Frequently Asked Questions </span></h2>
+                <h2><span>Frequently Asked Questions</span></h2>
                 <p class="m-0">
-                    Use these awesome forms to login or create new account in your
-                    project for free.
+                    Find answers to common questions about our ERPGo SaaS platform
                 </p>
             </div>
         </div>
@@ -707,10 +673,9 @@
                                 aria-expanded="true"
                                 aria-controls="collapseOne"
                             >
-                    <span class="d-flex align-items-center">
-                      <i class="ti ti-info-circle text-primary"></i> How do I
-                      order?
-                    </span>
+                                <span class="d-flex align-items-center">
+                                    <i class="ti ti-info-circle text-primary"></i> What is ERPGo SaaS?
+                                </span>
                             </button>
                         </h2>
                         <div
@@ -720,15 +685,7 @@
                             data-bs-parent="#accordionExample"
                         >
                             <div class="accordion-body">
-                                <strong>This is the first item's accordion body.</strong> It
-                                is shown by default, until the collapse plugin adds the
-                                appropriate classes that we use to style each element. These
-                                classes control the overall appearance, as well as the
-                                showing and hiding via CSS transitions. You can modify any
-                                of this with custom CSS or overriding our default variables.
-                                It's also worth noting that just about any HTML can go
-                                within the <code>.accordion-body</code>, though the
-                                transition does limit overflow.
+                                ERPGo SaaS is a comprehensive business management solution that combines Project Management, Accounting, HR, and CRM functionalities in one platform. It helps businesses streamline operations, improve productivity, and make data-driven decisions through real-time insights and analytics.
                             </div>
                         </div>
                     </div>
@@ -742,10 +699,9 @@
                                 aria-expanded="false"
                                 aria-controls="collapseTwo"
                             >
-                    <span class="d-flex align-items-center">
-                      <i class="ti ti-info-circle text-primary"></i> How do I
-                      order?
-                    </span>
+                                <span class="d-flex align-items-center">
+                                    <i class="ti ti-info-circle text-primary"></i> How secure is my data?
+                                </span>
                             </button>
                         </h2>
                         <div
@@ -755,15 +711,14 @@
                             data-bs-parent="#accordionExample"
                         >
                             <div class="accordion-body">
-                                <strong>This is the second item's accordion body.</strong>
-                                It is hidden by default, until the collapse plugin adds the
-                                appropriate classes that we use to style each element. These
-                                classes control the overall appearance, as well as the
-                                showing and hiding via CSS transitions. You can modify any
-                                of this with custom CSS or overriding our default variables.
-                                It's also worth noting that just about any HTML can go
-                                within the <code>.accordion-body</code>, though the
-                                transition does limit overflow.
+                                Your data security is our top priority. We implement industry-standard security measures including:
+                                <ul>
+                                    <li>End-to-end encryption for data transmission</li>
+                                    <li>Regular security audits and updates</li>
+                                    <li>Automated backup systems</li>
+                                    <li>Role-based access control</li>
+                                    <li>Compliance with data protection regulations</li>
+                                </ul>
                             </div>
                         </div>
                     </div>
@@ -777,10 +732,9 @@
                                 aria-expanded="false"
                                 aria-controls="collapseThree"
                             >
-                    <span class="d-flex align-items-center">
-                      <i class="ti ti-info-circle text-primary"></i> How do I
-                      order?
-                    </span>
+                                <span class="d-flex align-items-center">
+                                    <i class="ti ti-info-circle text-primary"></i> Can I customize the platform for my business needs?
+                                </span>
                             </button>
                         </h2>
                         <div
@@ -790,15 +744,80 @@
                             data-bs-parent="#accordionExample"
                         >
                             <div class="accordion-body">
-                                <strong>This is the third item's accordion body.</strong> It
-                                is hidden by default, until the collapse plugin adds the
-                                appropriate classes that we use to style each element. These
-                                classes control the overall appearance, as well as the
-                                showing and hiding via CSS transitions. You can modify any
-                                of this with custom CSS or overriding our default variables.
-                                It's also worth noting that just about any HTML can go
-                                within the <code>.accordion-body</code>, though the
-                                transition does limit overflow.
+                                Yes, ERPGo SaaS is highly customizable to meet your specific business requirements. You can:
+                                <ul>
+                                    <li>Customize workflows and processes</li>
+                                    <li>Create custom fields and forms</li>
+                                    <li>Configure user roles and permissions</li>
+                                    <li>Integrate with other business tools</li>
+                                    <li>Personalize dashboards and reports</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item card">
+                        <h2 class="accordion-header" id="headingFour">
+                            <button
+                                class="accordion-button collapsed"
+                                type="button"
+                                data-bs-toggle="collapse"
+                                data-bs-target="#collapseFour"
+                                aria-expanded="false"
+                                aria-controls="collapseFour"
+                            >
+                                <span class="d-flex align-items-center">
+                                    <i class="ti ti-info-circle text-primary"></i> What kind of support do you offer?
+                                </span>
+                            </button>
+                        </h2>
+                        <div
+                            id="collapseFour"
+                            class="accordion-collapse collapse"
+                            aria-labelledby="headingFour"
+                            data-bs-parent="#accordionExample"
+                        >
+                            <div class="accordion-body">
+                                We provide comprehensive support to ensure your success:
+                                <ul>
+                                    <li>24/7 technical support via email and chat</li>
+                                    <li>Regular training sessions and webinars</li>
+                                    <li>Detailed documentation and knowledge base</li>
+                                    <li>Dedicated account manager for enterprise clients</li>
+                                    <li>Regular updates and feature enhancements</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item card">
+                        <h2 class="accordion-header" id="headingFive">
+                            <button
+                                class="accordion-button collapsed"
+                                type="button"
+                                data-bs-toggle="collapse"
+                                data-bs-target="#collapseFive"
+                                aria-expanded="false"
+                                aria-controls="collapseFive"
+                            >
+                                <span class="d-flex align-items-center">
+                                    <i class="ti ti-info-circle text-primary"></i> How does the pricing work?
+                                </span>
+                            </button>
+                        </h2>
+                        <div
+                            id="collapseFive"
+                            class="accordion-collapse collapse"
+                            aria-labelledby="headingFive"
+                            data-bs-parent="#accordionExample"
+                        >
+                            <div class="accordion-body">
+                                We offer flexible pricing plans to suit businesses of all sizes:
+                                <ul>
+                                    <li>Pay-as-you-grow subscription model</li>
+                                    <li>No hidden fees or setup costs</li>
+                                    <li>Volume discounts for larger teams</li>
+                                    <li>Free trial period to test the platform</li>
+                                    <li>Custom enterprise pricing for large organizations</li>
+                                </ul>
                             </div>
                         </div>
                     </div>
