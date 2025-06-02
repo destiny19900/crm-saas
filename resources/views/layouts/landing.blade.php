@@ -35,7 +35,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="description" content="Dashboard Template Description" />
     <meta name="keywords" content="Dashboard Template" />
-    <meta name="author" content="Rajodiya Infotech" />
+    <meta name="author" content="Buildera Tech" />
 
     <!-- Favicon icon -->
     <link rel="icon" href="{{asset('assets/images/favicon.png')}}" type="image/x-icon" />
@@ -129,18 +129,17 @@
                     class="text-white mb-sm-4 wow animate__fadeInLeft"
                     data-wow-delay="0.4s"
                 >
-                    {{__('All In One Business ERP With Project, Account, HRM, CRM')}}
+                    {{__('All-In-One Business Management Solution')}}
                 </h2>
                 <p class="mb-sm-4 wow animate__fadeInLeft" data-wow-delay="0.6s">
-                    Use these awesome forms to login or create new account in your
-                    project for free.
+                    Streamline your business operations with our comprehensive ERP platform. Manage projects, accounts, HR, and CRM all in one place. Boost productivity and make data-driven decisions with real-time insights.
                 </p>
                 <div class="my-4 wow animate__fadeInLeft" data-wow-delay="0.8s">
                     <a href="{{ route('login') }}" class="btn btn-light me-2"
-                    ><i class="far fa-eye me-2"></i>Live Demo</a
+                    ><i class="far fa-eye me-2"></i>Try Demo</a
                     >
                     <a href="https://codecanyon.net/item/erpgo-saas-all-in-one-business-erp-with-project-account-hrm-crm/33263426" class="btn btn-outline-light" target="_blank"
-                    ><i class="fas fa-shopping-cart me-2"></i>Buy now</a
+                    ><i class="fas fa-shopping-cart me-2"></i>Get Started</a
                     >
                 </div>
             </div>
@@ -161,7 +160,7 @@
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-xl-6 col-md-9 title">
-                <h2><span>Happy clients use Dashboard</span> </h2>
+                <h2><span>Trusted by Businesses Worldwide</span> </h2>
             </div>
         </div>
         <div class="row align-items-center justify-content-center mobile-screen dashboard_images">
@@ -252,18 +251,17 @@
                     class="mb-sm-4 f-w-600 wow animate__fadeInLeft"
                     data-wow-delay="0.2s"
                 >
-                    {{__('ERPGo SaaS')}}
+                    {{__('Project Management')}}
                 </h1>
                 <h2 class="mb-sm-4 wow animate__fadeInLeft" data-wow-delay="0.4s">
-                    {{__(' All In One Business ERP With Project, Account, HRM, CRM')}}
+                    {{__('Streamline Your Projects')}}
                 </h2>
                 <p class="mb-sm-4 wow animate__fadeInLeft" data-wow-delay="0.6s">
-                    Use these awesome forms to login or create new account in your
-                    project for free.
+                    Plan, track, and manage projects efficiently. Set milestones, assign tasks, and monitor progress in real-time. Keep your team aligned and deliver projects on time, every time.
                 </p>
                 <div class="my-4 wow animate__fadeInLeft" data-wow-delay="0.8s">
                     <a href="#" class="btn btn-primary" target="_blank"
-                    ><i class="fas fa-shopping-cart me-2"></i>Buy now</a
+                    ><i class="fas fa-rocket me-2"></i>Learn More</a
                     >
                 </div>
             </div>
@@ -290,18 +288,17 @@
                     class="mb-sm-4 f-w-600 wow animate__fadeInRight"
                     data-wow-delay="0.2s"
                 >
-                    {{__('ERPGo SaaS')}}
+                    {{__('Financial Management')}}
                 </h1>
                 <h2 class="mb-sm-4 wow animate__fadeInRight" data-wow-delay="0.4s">
-                    {{__('All In One Business ERP With Project, Account, HRM, CRM')}}
+                    {{__('Complete Financial Control')}}
                 </h2>
                 <p class="mb-sm-4 wow animate__fadeInRight" data-wow-delay="0.6s">
-                    Use these awesome forms to login or create new account in your
-                    project for free.
+                    Manage your finances with precision. Track expenses, generate invoices, monitor cash flow, and get detailed financial reports. Make informed decisions with comprehensive financial insights.
                 </p>
                 <div class="my-4 wow animate__fadeInRight" data-wow-delay="0.8s">
                     <a href="#" class="btn btn-primary" target="_blank"
-                    ><i class="fas fa-shopping-cart me-2"></i>Buy now</a
+                    ><i class="fas fa-chart-line me-2"></i>Explore Features</a
                     >
                 </div>
             </div>
@@ -436,18 +433,17 @@
                     class="mb-sm-4 f-w-600 wow animate__fadeInLeft"
                     data-wow-delay="0.2s"
                 >
-                    {{__('ERPGo SaaS')}}
+                    {{__('HR & CRM')}}
                 </h1>
                 <h2 class="mb-sm-4 wow animate__fadeInLeft" data-wow-delay="0.4s">
-                    {{__('All In One Business ERP With Project, Account, HRM, CRM')}}
+                    {{__('Manage Your Team & Customers')}}
                 </h2>
                 <p class="mb-sm-4 wow animate__fadeInLeft" data-wow-delay="0.6s">
-                    Use these awesome forms to login or create new account in your
-                    project for free.
+                    Handle employee management, recruitment, and performance tracking. Build stronger customer relationships with our powerful CRM tools. Everything you need to grow your business.
                 </p>
                 <div class="my-4 wow animate__fadeInLeft" data-wow-delay="0.8s">
                     <a href="#" class="btn btn-primary" target="_blank"
-                    ><i class="fas fa-shopping-cart me-2"></i>Buy now</a
+                    ><i class="fas fa-users me-2"></i>Discover More</a
                     >
                 </div>
             </div>
@@ -474,18 +470,17 @@
                     class="mb-sm-4 f-w-600 wow animate__fadeInRight"
                     data-wow-delay="0.2s"
                 >
-                    {{__('ERPGo SaaS')}}
+                    {{__('Business Intelligence')}}
                 </h1>
                 <h2 class="mb-sm-4 wow animate__fadeInRight" data-wow-delay="0.4s">
-                    {{__('All In One Business ERP With Project, Account, HRM, CRM')}}
+                    {{__('Data-Driven Insights')}}
                 </h2>
                 <p class="mb-sm-4 wow animate__fadeInRight" data-wow-delay="0.6s">
-                    Use these awesome forms to login or create new account in your
-                    project for free.
+                    Transform your business data into actionable insights. Get real-time analytics, custom reports, and performance metrics. Make smarter decisions with our powerful business intelligence tools.
                 </p>
                 <div class="my-4 wow animate__fadeInRight" data-wow-delay="0.8s">
                     <a href="#" class="btn btn-primary" target="_blank"
-                    ><i class="fas fa-shopping-cart me-2"></i>Buy now</a
+                    ><i class="fas fa-chart-bar me-2"></i>View Analytics</a
                     >
                 </div>
             </div>
@@ -822,18 +817,17 @@
                     class="mb-sm-4 f-w-600 wow animate__fadeInLeft"
                     data-wow-delay="0.2s"
                 >
-                    {{__('ERPGo SaaS')}}
+                    {{__('Cloud-Based Solution')}}
                 </h1>
                 <h2 class="mb-sm-4 wow animate__fadeInLeft" data-wow-delay="0.4s">
-                    {{__('All In One Business ERP With Project, Account, HRM, CRM')}}
+                    {{__('Access Anywhere, Anytime')}}
                 </h2>
                 <p class="mb-sm-4 wow animate__fadeInLeft" data-wow-delay="0.6s">
-                    Use these awesome forms to login or create new account in your
-                    project for free.
+                    Work seamlessly across devices with our cloud-based platform. Secure data storage, automatic backups, and regular updates. Focus on growing your business while we handle the technology.
                 </p>
                 <div class="my-4 wow animate__fadeInLeft" data-wow-delay="0.8s">
                     <a href="#" class="btn btn-primary" target="_blank"
-                    ><i class="fas fa-shopping-cart me-2"></i>Buy now</a
+                    ><i class="fas fa-cloud me-2"></i>Learn More</a
                     >
                 </div>
             </div>
@@ -925,8 +919,7 @@
                 @endif
             </div>
             <div class="col-lg-6 col-sm-12 text-end">
-
-                <p class="text-body">Copyright © 2022 | Design By ERPGo</p>
+                <p class="text-body">Copyright © {{ date('Y') }} ERPGo SaaS | All Rights Reserved</p>
             </div>
         </div>
     </div>
